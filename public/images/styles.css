@@ -1,0 +1,13 @@
+
+  .square-box {
+    width: 200px;
+    height: 200px;
+  }
+
+
+
+  .square-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
