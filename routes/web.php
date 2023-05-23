@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostListController;
 
@@ -27,11 +28,12 @@ Route::post('/login', [UserController::class, 'login']);
 
 Route::post('/logout', [UserController::class, 'logout']);
 
-// Route::get('/home', 'HomeController@index')->name('home');
-
-// Route::get('/postlist', [PostListController::class, 'index']);
-
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
-    Route::get('/postlist', [PostListController::class, 'index']);
+    Route::get('/postlist', [PostListController::class, 'index'])->name('postlist');
+    Route::get('/create-post', [PostController::class, 'index'])->name('create-post');
+    Route::post('/create-post', [PostController::class, 'createPost'])->name('create-post');
+
+
 });
+

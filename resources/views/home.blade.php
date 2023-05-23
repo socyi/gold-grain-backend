@@ -52,6 +52,9 @@
             </div>
             <ul class="lg:flex list-reset lg:justify-end flex-1 items-center">
               <li class="mr-3">
+                <a class="inline-block text-green no-underline hover:text-yellow-800 hover:text-underline py-2 px-12" href="{{ route('postlist') }}">Go to Posts List</a>
+              </li>
+              <li class="mr-3">
                 <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#about">About Us</a>
               </li>
               <li class="mr-3">

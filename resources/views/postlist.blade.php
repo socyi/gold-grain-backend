@@ -16,14 +16,11 @@
     <div class="mb-4">
       
 
-    <form action="/logout" method="POST">
-    @csrf
-    <button>Logout</button>
-    </form>
+    
 
-      <h1 class="font-serif text-3xl font-bold underline decoration-gray-400"> Table of Contents</h1>
+      <h1 class="font-serif text-3xl font-bold underline decoration-gray-400">Posts Lists</h1>
       <div class="flex justify-end">
-        <button class="px-4 py-2 rounded-md bg-yellow-500 text-sky-100 hover:bg-yellow-600">Create Post</button>
+        <a href="{{ route('create-post') }}" class="px-4 py-2 rounded-md bg-yellow-500 text-sky-100 hover:bg-yellow-600">Create Post</a>
       </div>
     </div>
     <div class="flex flex-col">
@@ -214,3 +211,20 @@
       </div>
     </div>
   </div>
+
+  <div class="container mx-auto mt-8">
+    <div class="flex justify-between items-center">
+      <form action="/logout" method="POST">
+        @csrf
+        <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
+          Logout
+        </button>
+      </form>
+      <a href="{{ route('home') }}" class="text-blue-500 hover:text-blue-600">
+        Go to homepage
+      </a>
+    </div>
+  </div>
+  
+
+
