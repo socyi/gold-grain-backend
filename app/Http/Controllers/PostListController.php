@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostListController extends Controller
 {
     public function index()
     {
-        return view('postlist');
+        $posts = Post::all(); // Retrieve all posts from the "posts" table
+    
+        return view('postlist', compact('posts'));
     }
 }

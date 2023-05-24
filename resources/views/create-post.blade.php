@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind CSS Create Post UI with form plugins</title>
+    <title> Create Post </title>
     <script src="https://cdn.tailwindcss.com/?plugins=forms"></script>
     
   </head>
@@ -51,15 +51,16 @@
                 <input type="file" name="image" id="image" class="form-control-file">
               </div>
 
+            
               <div class="flex items-center justify-start mt-4 gap-x-2">
                 <button type="submit"
                   class="px-6 py-2 text-sm font-semibold rounded-md shadow-md text-sky-100 bg-yellow-500 hover:bg-yellow-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">
                   Save
                 </button>
-                <button type="submit"
-                  class="px-6 py-2 text-sm font-semibold text-gray-100 bg-gray-400 rounded-md shadow-md hover:bg-gray-600 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">
-                  Cancel
-                </button>
+                <a href="{{ route('postlist') }}"
+                class="px-6 py-2 text-sm font-semibold text-gray-100 bg-gray-400 rounded-md shadow-md hover:bg-gray-600 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">
+                Cancel
+            </a>
               </div>
             </form>
           </div>
@@ -68,19 +69,7 @@
     </div>
   </body>
 
-  <script src="{{ asset('path/to/tinymce/tinymce.min.js') }}"></script>
-<script>
-    tinymce.init({
-        selector: 'textarea#content',
-        plugins: 'image',
-        toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | image',
-        height: 300,
-        images_upload_url: '/upload-image', // The URL to upload the image
-        images_upload_handler: function (blobInfo, success, failure) {
-            // Custom logic to handle image upload, e.g., using Ajax
-        }
-    });
-</script>
+
 
 </html>
 
